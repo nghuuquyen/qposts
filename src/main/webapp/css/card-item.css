@@ -1,0 +1,122 @@
+/* Layout */
+
+.row {
+  background-color: #EEE;
+}
+
+.col {
+  float: left;
+  width: 33.33%;
+}
+
+/* Base */
+a {
+  text-decoration: none;
+}
+
+/* Component: Card */
+
+.qt-card {
+  background-color: white;
+  border: 1px solid #EEE;
+  box-shadow: 2px 2px 2px #E7E7E7;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.qt-card {
+  max-width: 350px;
+  min-width: 200px;
+}
+
+.qt-card .card-header {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+.qt-card .card-header img {
+  /* equals to min-width of card */
+  min-width: 200px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.qt-card .card-header .time {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: orange;
+  padding: 10px;
+  border-radius: 50%;
+  width: 35px;
+  word-break: break-word;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.qt-card .card-header .categories {
+  background-color: orange;
+  position: absolute;
+  height: 20px;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.qt-card .card-body {
+  padding: 10px;
+  height: 100px;
+}
+
+.qt-card .card-body h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.qt-card .card-body p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.qt-card .card-footer {
+  padding: 10px;
+}
+
+.qt-card .card-footer .card-statis a {
+  text-decoration: none;
+  color: gray;
+}
+
+.qt-card .card-footer .card-statis a span {
+  background-color: #E86B0C;
+  padding: 3px;
+  color: white;
+  font-weight: bold;
+  border-radius: 40%;
+}
+
+@media screen and (max-width: 500px) {
+  .qt-card {
+    min-width: 100%;
+    margin-bottom: 5px;
+  }
+  .qt-card .card-header {
+    /* height auto for best scale image on mobile. */
+    height: auto;
+    max-height: 150px;
+  }
+  .col {
+    float: left;
+    width: 100%;
+  }
+}
