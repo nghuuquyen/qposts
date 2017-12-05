@@ -7,9 +7,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>${post.name}| Q Posts</title>
-<link rel="stylesheet" href="/qposts/css/homepage.css" />
-<link rel="stylesheet" href="/qposts/css/card-item.css" />
+<title>Edit ${post.name}| Q Posts</title>
+<base href="${pageContext.request.contextPath}/" />
+<link rel="stylesheet" href="css/homepage.css" />
+<link rel="stylesheet" href="css/card-item.css" />
+<link rel="stylesheet" href="css/components/form.css" />
 
 </head>
 <body>
@@ -18,16 +20,40 @@
 	<!-- page content -->
 	<div class="page-wrap">
 		<div class="container">
+			<h1>Edit ${post.name}</h1>
+			<hr/>
 			<h3>${message}</h3>
-			<form action="/qposts/post/edit" method="POST">
-				<input type="hidden" name="pId" value="${post.id}" /> 
-				<input type="text" name="pName" value="${post.name}" /> 
-				<input type="text" name="pDescription" value="${post.description}" />
-				<textarea rows="4" cols="50" name="pContent">
-					${post.content}
-				</textarea>
-				<input type="submit" value="Do Update" />
-			</form>
+			<div class="container">
+				<form action="post/edit?id=${post.id}" method="POST">
+					<input type="hidden" name="pId" value="${post.id}" />
+					<input type="hidden" name="csrf" value="${csrf}" />
+					<div class="row">
+						<div class="col-25">Post Name</div>
+
+						<div class="col-75">
+							<input type="text" name="pName" value="${post.name}" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-25">Description</div>
+
+						<div class="col-75">
+							<input type="text" name="pDescription"
+								value="${post.description}" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-25">Content</div>
+
+						<div class="col-75">
+							<textarea rows="4" cols="50" name="pContent"><c:out value="${post.content}" /></textarea>
+						</div>
+					</div>
+
+					<input type="submit" value="Do Update" />
+				</form>
+			</div>
+			
 			<div style="clear: both;"></div>
 		</div>
 	</div>

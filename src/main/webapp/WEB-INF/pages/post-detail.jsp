@@ -7,9 +7,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>${post.name} | Q Posts</title>
-<link rel="stylesheet" href="/qposts/css/homepage.css" />
-<link rel="stylesheet" href="/qposts/css/card-item.css" />
+<title>${post.name}| Q Posts</title>
+<base href="${pageContext.request.contextPath}/" />
+<link rel="stylesheet" href="css/homepage.css" />
+<link rel="stylesheet" href="css/card-item.css" />
 
 </head>
 <body>
@@ -23,10 +24,10 @@
 				<!-- post title -->
 				<div class="post-title">
 					<h1>${post.name}</h1>
-					Posted by <a href="https://github.com/nghuuquyen/">@nghuuquyen</a>
+					Posted by <a href="https://github.com/nghuuquyen">@nghuuquyen</a>
 				</div>
 				<!-- ./ post title -->
-
+				<br />
 				<!-- post content -->
 				<div class="post-content">${post.content}</div>
 				<!-- ./ post content -->

@@ -3,8 +3,9 @@
 <!--  header-->
 <div class="header">
 	<nav class="header-navbar">
-		<a href="/">Home</a> | <a href="/services"> About</a> | <a
-			href="/services"> Contact</a>
+		<a href="">Home</a> | 
+		<a href="about"> About</a> | 
+		<a href="contact"> Contact</a>
 	</nav>
 
 	<div class="header-banner">

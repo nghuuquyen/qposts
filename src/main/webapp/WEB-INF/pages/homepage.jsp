@@ -3,18 +3,18 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Homepage</title>
-<link rel="stylesheet" href="/qposts/css/homepage.css" />
-<link rel="stylesheet" href="/qposts/css/card-item.css" />
-
+<title>Q Posts Home page</title>
+<base href="${pageContext.request.contextPath}/" />
+<link rel="stylesheet" href="css/homepage.css" />
+<link rel="stylesheet" href="css/card-item.css" />
 </head>
 <body>
 	<jsp:include page="./fragments/header.jsp" />
-
 	<!-- page content -->
 	<div class="page-wrap">
 		<div class="container">
@@ -32,9 +32,10 @@
 								<img src="http://www.bates.edu/biology/files/2015/02/Rain.jpg" />
 								<span class="categories">${post.category.name}</span>
 							</div>
+
 							<div class="card-body">
 								<h3>
-									<a href="/qposts/${post.id}">${post.name}</a>
+									<a href="post?id=${post.id}">${post.name}</a>
 								</h3>
 								<p>
 									<c:out value="${post.description}" />
