@@ -31,7 +31,7 @@ public class PostDAOImpl implements PostDAO {
 		try (Connection conn = dbConnection.getConnection()) {
 			// Create statement object with connection object.
 			Statement stm = conn.createStatement();
-
+			
 			// Execute query string by statement object.
 			ResultSet rs = stm.executeQuery(QS_GET_ALL_POST);
 
@@ -120,12 +120,12 @@ public class PostDAOImpl implements PostDAO {
 
 		try (Connection conn = dbConnection.getConnection()) {
 			PreparedStatement stm = conn.prepareStatement(QS_UPDATE_POST);
-
+			
 			stm.setString(1, post.getName());
 			stm.setString(2, post.getDescription());
 			stm.setString(3, post.getContent());
 			stm.setString(4, post.getId());
-
+			
 			return stm.executeUpdate() != 0;
 		} catch (SQLException e) {
 			throw new DAOException(e.getMessage());

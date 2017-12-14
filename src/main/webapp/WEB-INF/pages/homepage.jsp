@@ -10,6 +10,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Q Posts Home page</title>
 <base href="${pageContext.request.contextPath}/" />
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+
 <link rel="stylesheet" href="css/homepage.css" />
 <link rel="stylesheet" href="css/card-item.css" />
 </head>
@@ -29,7 +32,7 @@
 						<!-- card -->
 						<div class="qt-card">
 							<div class="card-header">
-								<img src="http://www.bates.edu/biology/files/2015/02/Rain.jpg" />
+								<img src="images/rain.jpg" />
 								<span class="categories">${post.category.name}</span>
 							</div>
 

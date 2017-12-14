@@ -6,11 +6,11 @@
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <filter>
-    <filter-name>CSRF Token Gennerate Filter</filter-name>
+    <filter-name>CSRFTokenFilter</filter-name>
     <filter-class>filters.CSRFTokenFilter</filter-class>
   </filter>
   <filter-mapping>
-    <filter-name>CSRF Token Gennerate Filter</filter-name>
+    <filter-name>CSRFTokenFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
   <servlet>

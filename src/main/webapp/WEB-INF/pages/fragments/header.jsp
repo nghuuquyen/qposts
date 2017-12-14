@@ -3,9 +3,9 @@
 <!--  header-->
 <div class="header">
 	<nav class="header-navbar">
-		<a href="">Home</a> | 
-		<a href="about"> About</a> | 
-		<a href="contact"> Contact</a>
+		<a href="${pageContext.request.contextPath}/" target="_self">Home</a> | 
+		<a href="about" target="_self"> About</a> | 
+		<a href="contact" target="_self"> Contact</a>
 	</nav>
 
 	<div class="header-banner">

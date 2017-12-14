@@ -9,6 +9,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Create new post | Q Posts</title>
 <base href="${pageContext.request.contextPath}/" />
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+
 <link rel="stylesheet" href="css/homepage.css" />
 <link rel="stylesheet" href="css/card-item.css" />
 <link rel="stylesheet" href="css/components/form.css" />
