@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Edit ${post.name}| Q Posts</title>
+<title>Create new post | Q Posts</title>
 <base href="${pageContext.request.contextPath}/" />
 <link rel="stylesheet" href="css/homepage.css" />
 <link rel="stylesheet" href="css/card-item.css" />
@@ -20,13 +20,24 @@
 	<!-- page content -->
 	<div class="page-wrap">
 		<div class="container">
-			<h1>Edit ${post.name}</h1>
+			<h1>Create new</h1>
 			<hr/>
 			<h3>${message}</h3>
 			<div class="container">
-				<form action="post/edit?id=${post.id}" method="POST">
-					<input type="hidden" name="pId" value="${post.id}" />
+				<form action="post/create" method="POST">
 					<input type="hidden" name="_csrf" value="${_csrf}" />
+					<div class="row">
+						<div class="col-25">Category</div>
+		
+						<div class="col-75">
+							<select name="cId">
+								<c:forEach var="c" items="${categories}">
+									<option value="${c.id}">${c.name}</option>
+								</c:forEach>
+							</select>
+						</div>
+					</div>
+					
 					<div class="row">
 						<div class="col-25">Post Name</div>
 
@@ -51,7 +62,7 @@
 					</div>
 					
 					<br/>
-					<input type="submit" value="Do Update" />
+					<input type="submit" value="Do Create" />
 				</form>
 			</div>
 			

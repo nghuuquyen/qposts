@@ -22,8 +22,8 @@ public class HomepageServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// 1. Query all departments at first page and limit 20 posts.
-		request.setAttribute("posts", postBO.getAllPosts(20, 0));
+		// 1. Query all departments at first page and limit 50 posts.
+		request.setAttribute("posts", postBO.getAllPosts(50, 0));
 		
 		// 2. Create dispatcher for forward data for JSP file.
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/pages/homepage.jsp");

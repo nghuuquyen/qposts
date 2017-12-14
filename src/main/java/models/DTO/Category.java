@@ -7,7 +7,12 @@ public class Category {
 	String name;
 	String description;
 	List<Post> posts;
-
+	
+	public Category() {}
+	
+	public Category(String id) {
+		this.id = id;
+	}
 
 	public List<Post> getPosts() {
 		return posts;
