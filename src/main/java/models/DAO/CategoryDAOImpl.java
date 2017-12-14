@@ -10,13 +10,13 @@ import java.util.List;
 import exceptions.DAOException;
 import models.DTO.Category;
 import models.utils.DBConnection;
-import models.utils.SQLiteDBConnection;
+import models.utils.MySQLDBConnection;
 
 public class CategoryDAOImpl implements CategoryDAO {
 
 	@Override
 	public List<Category> getAll(int limit, int skip) throws DAOException {
-		DBConnection dbConnection = new SQLiteDBConnection();
+		DBConnection dbConnection = new MySQLDBConnection();
 		List<Category> categories = new ArrayList<>();
 
 		try (Connection conn = dbConnection.getConnection()) {
